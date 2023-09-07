@@ -60,16 +60,12 @@ document.addEventListener('DOMContentLoaded', function () {
             showCancelButton: true,
             confirmButtonText: 'Ingresar',
             cancelButtonText: 'Cancelar',
-            preConfirm: () => {
-                // Validar los campos aquí (por ejemplo, verificar nombre de usuario y contraseña)
-                const username = document.getElementById('admin-username').value;
-                const password = document.getElementById('admin-password').value;
-
-                // Aquí puedes agregar la lógica de autenticación
-
-                // Si la autenticación es exitosa, puedes redirigir al usuario administrador a la página correspondiente
-                // Si la autenticación falla, puedes mostrar un mensaje de error
-            },
+            customClass: {
+                popup: 'mi-swal-popup',
+                title: 'mi-swal-title',
+                confirmButton: 'mi-swal-confirm-button',
+                cancelButton: 'mi-swal-cancel-button'
+            }
         });
     });
 });
@@ -78,3 +74,53 @@ document.addEventListener('DOMContentLoaded', function () {
 Configuración ocultar/mostrar login "Fin" ##########################################################################
 ####################################################################################################################
 */
+/*
+####################################################################################################################
+Configuración del panle de administrador "Inicio" ##################################################################
+####################################################################################################################
+*/
+document.addEventListener('DOMContentLoaded', function() {
+    const eventForm = document.getElementById('event-form');
+    const addButton = document.getElementById('add-event-button'); // Asegúrate de asignar un ID al botón en tu HTML.
+
+    eventForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const eventTitle = document.getElementById('event-title').value;
+        const eventDate = document.getElementById('event-date').value;
+
+        // Aquí puedes agregar la lógica para guardar el evento en tu base de datos o calendario.
+        // Por ejemplo, puedes usar FullCalendar para agregar eventos programáticamente.
+
+        // Ejemplo de cómo agregar un evento a FullCalendar:
+        const calendar = document.getElementById('calendar'); // Debes tener una referencia al calendario.
+        const calendarApi = new FullCalendar.Calendar(calendar, {
+            // Configuración de FullCalendar
+        });
+
+        calendarApi.addEvent({
+            title: eventTitle,
+            start: eventDate,
+            allDay: true // Esto indica que es un evento de día completo.
+        });
+
+        // Refresca el calendario para mostrar el nuevo evento.
+        calendarApi.render();
+
+        // Limpiar el formulario
+        document.getElementById('event-title').value = '';
+        document.getElementById('event-date').value = '';
+    });
+
+    // Agrega un evento de clic al botón para redirigir al usuario a index.html
+    addButton.addEventListener('click', function() {
+        window.location.href = 'index.html';
+    });
+});
+
+/*
+####################################################################################################################
+Configuración del panle de administrador "Fin" #####################################################################
+####################################################################################################################
+*/
+

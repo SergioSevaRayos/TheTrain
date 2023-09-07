@@ -18,7 +18,7 @@ body {
 
 /* Estilos para el encabezado */
 header {
-    background-color: #ff6b6b; /* Rojo claro */
+    background: linear-gradient(90deg, #007bff, #ff6b6b); /* Degradado azul a rosa */
     color: white;
     text-align: center;
     padding: 20px;
@@ -26,17 +26,23 @@ header {
 
 header h1 {
     font-size: 76px;
+    text-shadow: 0px 2px 2px black;
 }
 
 header p {
     font-size: 28px;
     margin-top: 10px;
+    text-shadow: 0px 2px 2px black;
 }
-
-/* Estilos para el contenido principal */
+/*
+######################################################
+Inicio main ##########################################
+######################################################
+*/
 main {
     flex-grow: 1; /* Permite que el contenido principal crezca con el espacio disponible */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 140px;
@@ -46,15 +52,43 @@ main {
 /* Estilos para el calendario */
 #calendar {
     max-width: 70%; /* Ocupa el 70% del ancho de su contenedor */
-    background-color: #ff6b6b; /* Fondo blanco */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: 100%; /* Ocupa todo el ancho del contenedor */
+    background: linear-gradient(90deg, #007bff, #ff6b6b); /* Degradado azul a rosa */
 }
+
+/* Cambia el fondo del mensaje de SweetAlert */
+.swal2-popup {
+    background: linear-gradient(90deg, #007bff, #ff6b6b); /* Degradado azul a rosa */
+}
+
+/* Cambia el color del texto en SweetAlert */
+.swal2-title {
+    color: white;
+}
+
+/* Cambia el color del texto del botón */
+.swal2-confirm {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Cambia el color del botón Cancelar */
+.swal2-cancel {
+    background-color: #750983;
+    color: #fff;
+}
+
+/*
+######################################################
+Fin main #############################################
+######################################################
+*/
 /* Estilos para el pie de página */
 footer {
-    background-color: #ff6b6b; /* Rojo claro */
+    background: linear-gradient(90deg, #007bff, #ff6b6b); /* Degradado azul a rosa */
     color: white;
     text-align: center;
     padding: 10px;

@@ -21,31 +21,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <!--Fin librería fuentes-->
-
+    
     <!--Inicio librería cookies-->
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/src/js.cookie.min.js"></script>
     <!--Fin librería cookies-->
-    
+
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
     <header>
-        <h1>THE TRAIN</h1>
-        <p>Bienvenido!! Puedes mirar aquí nuestras fiestas de cumpleaños.</p>
+        <h1>Panel de Administración</h1>
     </header>
 
     <main>
-        <div id='calendar'></div>
-        <div class="noticias">
-            <h1>Aqui se publican las noticias</h1>
-        </div>
+        <form id="event-form">
+            <label for="event-title">Título del Evento:</label>
+            <input type="text" id="event-title" required><br>
+
+            <label for="event-date">Fecha del Evento:</label>
+            <input type="date" id="event-date" required><br>
+
+            <button id="add-event-button" type="submit">Agregar Evento al Calendario</button>
+
+        </form>
     </main>
 
     <footer class="footer">
-        The Train - <a href="mailto:">@Email</a> - Cumpleaños y fiestas en The Train &copy; 2023 -
-        <a href="#top" id="admin-access-link">Acceso Administrador</a>
+        <a href="index.html">Volver al Calendario</a>
     </footer>
 
     <script src="logica.js"></script>
