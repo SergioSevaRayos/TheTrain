@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Inicio Librería calendario-->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.9.0/main.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.9.0/main.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.9.0/locales/es.js'></script>
+    <!--Fin Librería calendario-->
+
+    <!--Inicio Librería SweetAlert2-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
+    <!--Fin Librería SweetAlert2-->
+
+
+    <!--Inicio librería fuentes-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <!--Fin librería fuentes-->
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>THE TRAIN</h1>
+        <p>Bienvenido!! Puedes mirar aquí nuestras fiestas de cumpleaños.</p>
+    </header>
+
+    <main>
+        <div id='calendar'></div>
+    </main>
+
+    <footer class="footer">
+        The Train - <a href="mailto:">@Email</a> - Cumpleaños y fiestas en The Train &copy; 2023 -
+        <a href="#top" id="admin-access-link">Acceso Administrador</a>
+    </footer>
+
+    <script src="logica.js"></script>
+</body>
+
+</html>
